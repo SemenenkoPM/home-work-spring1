@@ -7,21 +7,21 @@ import java.util.Scanner;
 public class CoffeeServiceImpl implements CoffeeService{
 
     Coffee cappuccino = new Coffee("Cappuccino", "100ml", 100);
-    Coffee latte = new Coffee("Latte", "150ml", 150);
+    Coffee latte = new Coffee("Latte", "150ml", 150); // обьекты здесь должны быть?
     @Override
-    public void getCoffeeByPrice(double price) {
-        if (cappuccino.getPrice() == price) {
-            System.out.println(cappuccino);
+    public Coffee getCoffeeByPrice(double price) {
+        if (cappuccino.getPrice() == price) { // как обратиться по другому к Coffee?
+            return cappuccino;
         } else if(latte.getPrice() == price){
-            System.out.println(latte);
-        } else System.out.println("У нас нет кофе за такую цену");
+            return latte;
+        } else return null;
     }
 
-    public void run() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("за какую стоимость кофе хочешь?");
-        double price = scanner.nextDouble();
-        getCoffeeByPrice(price);
-
-    }
+//    public void run() {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("за какую стоимость кофе хочешь?");
+//        double price = scanner.nextDouble();
+//        getCoffeeByPrice(price);
+//
+//    }
 }
