@@ -1,10 +1,8 @@
 package ru.itsjava.service;
 
-
-
 import java.util.Scanner;
 
-public class CoffeeHouseImpl implements CoffeeHouse{
+public class CoffeeHouseImpl implements CoffeeHouse {
     private final CoffeeService coffeeService; // почему по ссылке интерфейса обращаемся
 
     public CoffeeHouseImpl(CoffeeService coffeeService) {

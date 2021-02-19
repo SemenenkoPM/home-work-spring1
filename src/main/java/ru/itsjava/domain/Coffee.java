@@ -10,6 +10,6 @@ import lombok.ToString;
 public class Coffee {
     private final String name;
     private final String volume;
-    private final double price;
+    private final int price;
 
 }
